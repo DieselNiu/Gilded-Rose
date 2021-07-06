@@ -1,5 +1,9 @@
 package com.example;
 
+import com.example.iterms.AgedBrie;
+import com.example.iterms.BackstagePasses;
+import com.example.iterms.Sulfuras;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -10,22 +14,22 @@ public class TextTestFixture {
         System.out.println(baseline);
     }
 
-     static String getBaseline() {
+    static String getBaseline() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(out);
         printStream.println("OMGHAI!");
 
         Item[] items = new Item[]{
-            Item.createNormalItem("+5 Dexterity Vest", 10, 20), //
-            Item.createAgedBrie( 2, 0), //
-            Item.createNormalItem("Elixir of the Mongoose", 5, 7), //
-            Item.createSulfuras( 0, 80), //
-            Item.createSulfuras( -1, 80),
-           Item.createBackStagePass( 15, 20),
-            Item.createBackStagePass( 10, 49),
-            Item.createBackStagePass( 5, 49),
-            // this conjured item does not work properly yet
-            Item.createNormalItem("Conjured Mana Cake", 3, 6)};
+                new Item("+5 Dexterity Vest", 10, 20), //
+                new AgedBrie(2, 0), //
+                new Item("Elixir of the Mongoose", 5, 7), //
+                new Sulfuras(0, 80), //
+                new Sulfuras(-1, 80),
+                new BackstagePasses(15, 20),
+                new BackstagePasses(10, 49),
+                new BackstagePasses(5, 49),
+                // this conjured item does not work properly yet
+                new Item("Conjured Mana Cake", 3, 6)};
 
         GildedRose app = new GildedRose(items);
 
