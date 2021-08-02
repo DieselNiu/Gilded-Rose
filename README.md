@@ -6,4 +6,5 @@
 4. 把updateQuality改名字为passOneDay，对for循环里面的逻辑进行提炼函数passOneDay，搬移Item中。sellIn<0表明已经过期，isExpired updatSellInDays updateQualityAfterExpired  updateQuality
 5. 交换语句时有副作用的，但是测试竟然没有问题，所以在怀疑可能出错的地方加入测试
 6. 每次创建一个Item的时候都要传入同样的字符串，我希望在创建Item时不要手打字符串----写几个工厂方法解决创建问题
-7. if/else 改造成卫语句，记得加return。 
+7. 创建子类，使得Item类中的逻辑下沉
+8. if/else 改造成卫语句，记得加return。 
